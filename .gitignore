@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+.venv/
+venv/
+ENV/
+
+# Data (não versionar dados reais)
+01_input/cobol/*
+01_input/excel/*
+01_input/docs/*
+01_input/jcl/*
+02_parsed/**/*.json
+!02_parsed/**/.gitkeep
+
+# Neo4j
+neo4j_data/
+
+# ChromaDB
+chroma_db/
+
+# Environment
+.env
+*.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
