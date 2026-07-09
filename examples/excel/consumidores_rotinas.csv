@@ -1,0 +1,22 @@
+Programa,Sistema Consumidor,Área,Responsável,Criticidade,Tipo Interface,Frequência,Job,Descrição
+PGMCLI01,Internet Banking,Digital,Ana Costa,Crítica,Online/CICS,Real-time,,Consulta de dados do cliente no IB
+PGMCLI01,App Mobile,Digital,Ana Costa,Crítica,Online/CICS,Real-time,,Consulta de dados do cliente no App
+PGMCLI01,Atendimento Call Center,Comercial,Roberto Lima,Alta,Online/CICS,Real-time,,Consulta cadastral pelo operador
+PGMCLI02,Atendimento Presencial,Comercial,Roberto Lima,Alta,Online/CICS,Real-time,,Abertura de conta em agência
+PGMCLI02,Internet Banking,Digital,Ana Costa,Média,Online/CICS,Real-time,,Auto-cadastro pelo cliente
+PGMCLI03,Atendimento Presencial,Comercial,Roberto Lima,Alta,Online/CICS,Real-time,,Atualização cadastral em agência
+PGMCLI03,Atendimento Call Center,Comercial,Roberto Lima,Média,Online/CICS,Real-time,,Atualização por telefone
+PGMCLI03,App Mobile,Digital,Ana Costa,Média,Online/CICS,Real-time,,Atualização pelo app
+PGMCLI04,Atendimento Presencial,Comercial,Roberto Lima,Alta,Online/CICS,Real-time,,Encerramento de conta
+PGMCLI04,Compliance,Jurídico,Marcos Souza,Crítica,Online/CICS,Real-time,,Bloqueio por determinação judicial
+PGMVAL01,Internet Banking,Digital,Ana Costa,Crítica,Online/CICS,Real-time,,Validação de CPF no auto-cadastro
+PGMVAL01,Atendimento Presencial,Comercial,Roberto Lima,Crítica,Online/CICS,Real-time,,Validação de CPF na abertura
+PGMEND01,Atendimento Presencial,Comercial,Roberto Lima,Alta,Online/CICS,Real-time,,Manutenção de endereço
+PGMEND01,Correios,Parceiros,Fernanda Alves,Média,Arquivo,Diário,JOBCEP01,Atualização de CEP via Correios
+PGMTEL01,Atendimento Presencial,Comercial,Roberto Lima,Média,Online/CICS,Real-time,,Cadastro de telefone
+PGMTEL01,App Mobile,Digital,Ana Costa,Média,Online/CICS,Real-time,,Atualização de telefone pelo app
+PGMREL01,Gerência Comercial,Comercial,Paulo Santos,Alta,Batch,Mensal,JOBREL01,Relatório de clientes para gestão
+PGMREL01,Auditoria,Compliance,Marcos Souza,Alta,Batch,Trimestral,JOBREL02,Relatório para auditoria
+PGMDEP01,Atendimento Presencial,Comercial,Roberto Lima,Média,Online/CICS,Real-time,,Cadastro de dependentes
+PGMCLI05,Gestão de Base,Operações,Carlos Mendes,Alta,Batch,Mensal,JOBINA01,Limpeza de clientes inativos
+PGMCLI06,Qualidade de Dados,Operações,Carlos Mendes,Alta,Batch,Semanal,JOBENR01,Enriquecimento e merge cadastral
