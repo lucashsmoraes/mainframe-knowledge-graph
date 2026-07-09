@@ -1,0 +1,7 @@
+Rotina,Job JCL,Programa Principal,Programas Executados,Frequencia,Schedule,Dia Execucao,Horario,Area,Responsavel,Criticidade,Descricao,Predecessores,Arquivo Entrada,Arquivo Saida
+R_INATIVACAO,JOBINA01,PGMCLI05,PGMCLI05,Mensal,CTRL-M MENSAL,Dia 01,02:00,Operacoes,Carlos Mendes,Alta,Inativacao automatica de clientes sem acesso ha mais de 365 dias,Nenhum,,
+R_ENRIQUECIMENTO,JOBENR01,PGMCLI06,PGMCLI06,Semanal,CTRL-M SEMANAL,Sabado,04:00,Operacoes,Carlos Mendes,Alta,Enriquecimento e merge de cadastros duplicados via arquivo externo,Nenhum,PROD.CADASTRO.ENRIQUEC.INPUT,
+R_RELATORIO_GERENCIAL,JOBREL01,PGMREL01,PGMREL01,Mensal,CTRL-M MENSAL,Dia 05,06:00,Comercial,Paulo Santos,Alta,Relatorio consolidado de clientes ativos para gerencia comercial,Nenhum,,PROD.CADASTRO.RELCLI.MENSAL
+R_RELATORIO_AUDITORIA,JOBREL02,PGMREL01,PGMREL01,Trimestral,CTRL-M TRIMESTRAL,Dia 10,06:00,Compliance,Marcos Souza,Alta,Relatorio trimestral de clientes para auditoria e compliance,Nenhum,,PROD.CADASTRO.RELCLI.AUDIT
+R_ATUALIZACAO_CEP,JOBCEP01,PGMEND01,"PGMCEP01,PGMEND01",Diario,CTRL-M DIARIO,Seg a Sex,22:00,Parceiros,Fernanda Alves,Media,Atualizacao de CEP e enderecos via base dos Correios,JOBCORREIOS,PROD.CORREIOS.CEP.DIARIO,
+R_CADEIA_BATCH,JOBCAD01,PGMBAT01,"PGMBAT01,PGMCLI05,PGMCLI06,PGMREL01",Semanal,CTRL-M SEMANAL,Domingo,01:00,Operacoes,Carlos Mendes,Critica,Cadeia principal batch do modulo cadastral - orquestra inativacao e enriquecimento e relatorio,Nenhum,PROD.CADASTRO.ENRIQUEC.INPUT,PROD.CADASTRO.RELCLI.SEMANAL

@@ -1,0 +1,15 @@
+Programa,Tipo,Dominio,Descricao,Linguagem,Criticidade,Status,Data Criacao,Ultima Alteracao,Responsavel,Observacoes
+PGMCLI01,Online,Cadastro Cliente,Consulta de dados cadastrais de cliente por CPF,COBOL,Critica,Ativo,2019-03-15,2024-11-20,Equipe Cadastro,Programa mais executado do modulo
+PGMCLI02,Online,Cadastro Cliente,Inclusao de novo cliente no sistema cadastral,COBOL,Critica,Ativo,2019-05-20,2024-08-15,Equipe Cadastro,Chamado por PGMCAD01
+PGMCLI03,Online,Cadastro Cliente,Alteracao de dados cadastrais do cliente,COBOL,Alta,Ativo,2019-06-10,2025-01-10,Equipe Cadastro,Chamado por PGMCAD01
+PGMCLI04,Online,Cadastro Cliente,Exclusao logica de cliente do sistema,COBOL,Alta,Ativo,2019-07-22,2024-06-30,Equipe Cadastro,Nunca exclui fisicamente
+PGMCLI05,Batch,Cadastro Cliente,,COBOL,Alta,Ativo,2021-02-10,2025-03-01,Equipe Operacoes,Sem documentacao formal
+PGMCLI06,Batch,Cadastro Cliente,,COBOL,Alta,Ativo,2022-06-15,2025-05-20,Equipe Operacoes,Sem documentacao formal
+PGMVAL01,Sub-rotina,Validacao,Validacao de CPF e CNPJ,COBOL,Critica,Ativo,2019-04-01,2023-12-01,Equipe Cadastro,Chamado por varios programas
+PGMEND01,Online,Cadastro Endereco,Manutencao de enderecos do cliente,COBOL,Alta,Ativo,2020-02-14,2024-09-15,Equipe Cadastro,Chamado por PGMCAD02
+PGMTEL01,Online,Cadastro Telefone,Manutencao de telefones do cliente,COBOL,Media,Ativo,2020-04-18,2024-07-20,Equipe Cadastro,Chamado por PGMCAD02
+PGMREL01,Batch,Relatorios,Geracao de relatorio de clientes ativos,COBOL,Alta,Ativo,2021-01-25,2025-02-28,Equipe Relatorios,Gera arquivo sequencial
+PGMDEP01,Online,Cadastro Dependente,Manutencao de dependentes do cliente,COBOL,Media,Ativo,2021-08-10,2024-05-10,Equipe Cadastro,Chamado por PGMCAD02
+PGMCAD01,Online,Cadastro Cliente,Transacao CICS de cadastro completo - menu principal,COBOL,Critica,Ativo,2019-08-01,2025-01-15,Equipe Cadastro,Orquestrador online de cadastro
+PGMCAD02,Online,Cadastro Complementar,Transacao CICS de manutencao complementar,COBOL,Alta,Ativo,2020-05-01,2024-10-05,Equipe Cadastro,Orquestrador online complementar
+PGMBAT01,Batch,Batch Cadastral,Orquestrador de processos batch do modulo cadastral,COBOL,Critica,Ativo,2022-03-15,2025-04-01,Equipe Operacoes,Cadeia principal batch

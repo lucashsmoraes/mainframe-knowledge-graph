@@ -1,0 +1,26 @@
+Sistema Consumidor,Programa Consumidor,Programa Consumido,Area,Responsavel,Criticidade,Tipo Interface,Frequencia,Descricao Consumo
+Internet Banking,PGMCAD01,PGMCLI01,Digital,Ana Costa,Critica,Online/CICS,Real-time,Consulta de dados do cliente no IB
+Internet Banking,PGMCAD01,PGMCLI02,Digital,Ana Costa,Critica,Online/CICS,Real-time,Auto-cadastro pelo cliente no IB
+Internet Banking,PGMCAD01,PGMCLI03,Digital,Ana Costa,Media,Online/CICS,Real-time,Atualizacao cadastral pelo IB
+Internet Banking,PGMCAD02,PGMEND01,Digital,Ana Costa,Media,Online/CICS,Real-time,Atualizacao de endereco pelo IB
+Internet Banking,PGMCAD02,PGMTEL01,Digital,Ana Costa,Media,Online/CICS,Real-time,Atualizacao de telefone pelo IB
+App Mobile,PGMCAD01,PGMCLI01,Digital,Ana Costa,Critica,Online/CICS,Real-time,Consulta de dados do cliente no App
+App Mobile,PGMCAD01,PGMCLI03,Digital,Ana Costa,Media,Online/CICS,Real-time,Atualizacao cadastral pelo App
+App Mobile,PGMCAD02,PGMTEL01,Digital,Ana Costa,Media,Online/CICS,Real-time,Atualizacao de telefone pelo App
+Atendimento Call Center,PGMCAD01,PGMCLI01,Comercial,Roberto Lima,Alta,Online/CICS,Real-time,Consulta cadastral pelo operador
+Atendimento Call Center,PGMCAD01,PGMCLI03,Comercial,Roberto Lima,Media,Online/CICS,Real-time,Atualizacao por telefone
+Atendimento Presencial,PGMCAD01,PGMCLI01,Comercial,Roberto Lima,Alta,Online/CICS,Real-time,Consulta em agencia
+Atendimento Presencial,PGMCAD01,PGMCLI02,Comercial,Roberto Lima,Alta,Online/CICS,Real-time,Abertura de conta em agencia
+Atendimento Presencial,PGMCAD01,PGMCLI03,Comercial,Roberto Lima,Alta,Online/CICS,Real-time,Atualizacao cadastral em agencia
+Atendimento Presencial,PGMCAD01,PGMCLI04,Comercial,Roberto Lima,Alta,Online/CICS,Real-time,Encerramento de conta
+Atendimento Presencial,PGMCAD02,PGMEND01,Comercial,Roberto Lima,Alta,Online/CICS,Real-time,Manutencao de endereco em agencia
+Atendimento Presencial,PGMCAD02,PGMTEL01,Comercial,Roberto Lima,Media,Online/CICS,Real-time,Cadastro de telefone em agencia
+Atendimento Presencial,PGMCAD02,PGMDEP01,Comercial,Roberto Lima,Media,Online/CICS,Real-time,Cadastro de dependentes
+Compliance,PGMCAD01,PGMCLI04,Juridico,Marcos Souza,Critica,Online/CICS,Real-time,Bloqueio por determinacao judicial
+Gestao de Base,PGMBAT01,PGMCLI05,Operacoes,Carlos Mendes,Alta,Batch,Mensal,Inativacao de clientes sem acesso
+Qualidade de Dados,PGMBAT01,PGMCLI06,Operacoes,Carlos Mendes,Alta,Batch,Semanal,Enriquecimento e merge cadastral
+Gerencia Comercial,PGMBAT01,PGMREL01,Comercial,Paulo Santos,Alta,Batch,Mensal,Relatorio de clientes para gestao
+Auditoria,PGMBAT01,PGMREL01,Compliance,Marcos Souza,Alta,Batch,Trimestral,Relatorio para auditoria
+Correios,JOBCEP01,PGMEND01,Parceiros,Fernanda Alves,Media,Arquivo,Diario,Atualizacao de CEP via Correios
+PGMCAD01,,PGMVAL01,Cadastro,Equipe Cadastro,Critica,Internal CALL,Real-time,Validacao de CPF em todas operacoes
+PGMCAD02,,PGMVAL01,Cadastro,Equipe Cadastro,Critica,Internal CALL,Real-time,Validacao de CPF na manutencao

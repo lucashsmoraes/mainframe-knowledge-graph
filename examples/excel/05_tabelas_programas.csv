@@ -1,0 +1,36 @@
+Tabela,Schema,Programa,Tipo Acesso,Dominio,Descricao Tabela,Colunas Principais,Chave Primaria,Volume Estimado,Observacoes
+TB_CLIENTE,DBCAD,PGMCLI01,READ,Cadastro Cliente,Tabela principal com dados cadastrais do cliente,"NR_CPF,NM_CLIENTE,DT_NASCIMENTO,CD_SITUACAO,CD_AGENCIA,NR_CONTA",NR_CPF,5000000,Tabela mais acessada do dominio
+TB_CLIENTE,DBCAD,PGMCLI02,WRITE,Cadastro Cliente,Tabela principal com dados cadastrais do cliente,"NR_CPF,NM_CLIENTE,DT_NASCIMENTO,CD_SEXO,NM_MAE,CD_AGENCIA,NR_CONTA,CD_TIPO_PESSOA,NR_RG,CD_SITUACAO",NR_CPF,5000000,INSERT de novo cliente
+TB_CLIENTE,DBCAD,PGMCLI03,READ_WRITE,Cadastro Cliente,Tabela principal com dados cadastrais do cliente,"NR_CPF,NM_CLIENTE,DT_NASCIMENTO,NM_MAE,NR_RG,CD_AGENCIA,NR_CONTA,CD_SITUACAO",NR_CPF,5000000,SELECT para validar + UPDATE de dados
+TB_CLIENTE,DBCAD,PGMCLI04,READ_WRITE,Cadastro Cliente,Tabela principal com dados cadastrais do cliente,"NR_CPF,NM_CLIENTE,CD_SITUACAO,DT_INATIVACAO,CD_MOTIVO_INAT",NR_CPF,5000000,SELECT para validar + UPDATE para inativar
+TB_CLIENTE,DBCAD,PGMCLI05,READ_WRITE,Cadastro Cliente,Tabela principal com dados cadastrais do cliente,"NR_CPF,NM_CLIENTE,DT_ULT_ACESSO,CD_SITUACAO,DT_INATIVACAO,CD_MOTIVO_INAT",NR_CPF,5000000,Batch: SELECT inativos + UPDATE situacao
+TB_CLIENTE,DBCAD,PGMCLI06,READ_WRITE,Cadastro Cliente,Tabela principal com dados cadastrais do cliente,"NR_CPF,NM_CLIENTE,NR_RG,NM_MAE,DS_EMAIL,CD_SITUACAO,CD_MOTIVO_INAT",NR_CPF,5000000,Batch: SELECT/UPDATE/INSERT enriquecimento
+TB_CLIENTE,DBCAD,PGMVAL01,READ,Cadastro Cliente,Tabela principal com dados cadastrais do cliente,NR_CPF,NR_CPF,5000000,SELECT para verificar existencia
+TB_CLIENTE,DBCAD,PGMEND01,READ,Cadastro Cliente,Tabela principal com dados cadastrais do cliente,"NR_CPF,CD_SITUACAO",NR_CPF,5000000,SELECT para validar cliente ativo
+TB_CLIENTE,DBCAD,PGMTEL01,READ,Cadastro Cliente,Tabela principal com dados cadastrais do cliente,"NR_CPF,CD_SITUACAO",NR_CPF,5000000,SELECT para validar cliente ativo
+TB_CLIENTE,DBCAD,PGMREL01,READ,Cadastro Cliente,Tabela principal com dados cadastrais do cliente,"NR_CPF,NM_CLIENTE,DT_NASCIMENTO,CD_AGENCIA,NR_CONTA,CD_SITUACAO,DT_INCLUSAO",NR_CPF,5000000,SELECT para relatorio
+TB_CLIENTE,DBCAD,PGMDEP01,READ,Cadastro Cliente,Tabela principal com dados cadastrais do cliente,"NR_CPF,CD_SITUACAO",NR_CPF,5000000,SELECT para validar titular ativo
+TB_ENDERECO,DBCAD,PGMEND01,READ_WRITE,Cadastro Endereco,Enderecos vinculados ao cliente,"NR_CPF,CD_TIPO_ENDERECO,DS_LOGRADOURO,NR_ENDERECO,DS_COMPLEMENTO,NM_BAIRRO,NM_CIDADE,CD_UF,NR_CEP","NR_CPF,CD_TIPO_ENDERECO",8000000,SELECT/INSERT/UPDATE
+TB_ENDERECO,DBCAD,PGMCLI05,WRITE,Cadastro Endereco,Enderecos vinculados ao cliente,"NR_CPF,CD_SITUACAO","NR_CPF,CD_TIPO_ENDERECO",8000000,UPDATE situacao para inativo
+TB_ENDERECO,DBCAD,PGMCLI06,READ_WRITE,Cadastro Endereco,Enderecos vinculados ao cliente,"NR_CPF,CD_TIPO_ENDERECO,DS_LOGRADOURO,NR_CEP","NR_CPF,CD_TIPO_ENDERECO",8000000,UPDATE/INSERT no enriquecimento
+TB_ENDERECO,DBCAD,PGMREL01,READ,Cadastro Endereco,Enderecos vinculados ao cliente,"NR_CPF,DS_LOGRADOURO,NM_CIDADE,CD_UF,CD_TIPO_ENDERECO","NR_CPF,CD_TIPO_ENDERECO",8000000,SELECT para relatorio
+TB_TELEFONE,DBCAD,PGMTEL01,READ_WRITE,Cadastro Telefone,Telefones vinculados ao cliente,"NR_CPF,CD_TIPO_TELEFONE,NR_DDD,NR_TELEFONE,CD_SITUACAO","NR_CPF,CD_TIPO_TELEFONE",12000000,SELECT/INSERT/UPDATE/DELETE
+TB_TELEFONE,DBCAD,PGMCLI04,WRITE,Cadastro Telefone,Telefones vinculados ao cliente,"NR_CPF,CD_SITUACAO","NR_CPF,CD_TIPO_TELEFONE",12000000,UPDATE situacao para inativo
+TB_TELEFONE,DBCAD,PGMCLI05,WRITE,Cadastro Telefone,Telefones vinculados ao cliente,"NR_CPF,CD_SITUACAO","NR_CPF,CD_TIPO_TELEFONE",12000000,UPDATE situacao para inativo
+TB_TELEFONE,DBCAD,PGMCLI06,WRITE,Cadastro Telefone,Telefones vinculados ao cliente,"NR_CPF,CD_SITUACAO","NR_CPF,CD_TIPO_TELEFONE",12000000,UPDATE no merge
+TB_TELEFONE,DBCAD,PGMREL01,READ,Cadastro Telefone,Telefones vinculados ao cliente,"NR_CPF,NR_DDD,NR_TELEFONE,CD_TIPO_TELEFONE,CD_SITUACAO","NR_CPF,CD_TIPO_TELEFONE",12000000,SELECT para relatorio
+TB_DEPENDENTE,DBCAD,PGMDEP01,READ_WRITE,Cadastro Dependente,Dependentes vinculados ao cliente titular,"NR_CPF_TITULAR,NR_CPF_DEPENDENTE,NM_DEPENDENTE,DT_NASCIMENTO,CD_PARENTESCO,CD_SITUACAO","NR_CPF_TITULAR,NR_CPF_DEPENDENTE",2000000,SELECT/INSERT/DELETE
+TB_DEPENDENTE,DBCAD,PGMCLI06,WRITE,Cadastro Dependente,Dependentes vinculados ao cliente titular,"NR_CPF_TITULAR","NR_CPF_TITULAR,NR_CPF_DEPENDENTE",2000000,UPDATE no merge cadastral
+TB_LOG_OPERACAO,DBLOG,PGMCLI01,WRITE,Auditoria,Registro de auditoria de todas as operacoes,"CD_OPERACAO,NR_CPF,DT_OPERACAO,CD_PROGRAMA,DS_DETALHE",,50000000,INSERT de log de consulta
+TB_LOG_OPERACAO,DBLOG,PGMCLI02,WRITE,Auditoria,Registro de auditoria de todas as operacoes,"CD_OPERACAO,NR_CPF,DT_OPERACAO,CD_PROGRAMA,DS_DETALHE",,50000000,INSERT de log de inclusao
+TB_LOG_OPERACAO,DBLOG,PGMCLI03,WRITE,Auditoria,Registro de auditoria de todas as operacoes,"CD_OPERACAO,NR_CPF,DT_OPERACAO,CD_PROGRAMA,DS_DETALHE",,50000000,INSERT de log de alteracao
+TB_LOG_OPERACAO,DBLOG,PGMCLI04,WRITE,Auditoria,Registro de auditoria de todas as operacoes,"CD_OPERACAO,NR_CPF,DT_OPERACAO,CD_PROGRAMA,DS_DETALHE",,50000000,INSERT de log de exclusao
+TB_LOG_OPERACAO,DBLOG,PGMCLI05,WRITE,Auditoria,Registro de auditoria de todas as operacoes,"CD_OPERACAO,NR_CPF,DT_OPERACAO,CD_PROGRAMA,DS_DETALHE",,50000000,INSERT de log de inativacao batch
+TB_LOG_OPERACAO,DBLOG,PGMCLI06,WRITE,Auditoria,Registro de auditoria de todas as operacoes,"CD_OPERACAO,NR_CPF,DT_OPERACAO,CD_PROGRAMA,DS_DETALHE",,50000000,INSERT de log de enriquecimento
+TB_LOG_OPERACAO,DBLOG,PGMEND01,WRITE,Auditoria,Registro de auditoria de todas as operacoes,"CD_OPERACAO,NR_CPF,DT_OPERACAO,CD_PROGRAMA,DS_DETALHE",,50000000,INSERT de log de endereco
+TB_LOG_OPERACAO,DBLOG,PGMTEL01,WRITE,Auditoria,Registro de auditoria de todas as operacoes,"CD_OPERACAO,NR_CPF,DT_OPERACAO,CD_PROGRAMA,DS_DETALHE",,50000000,INSERT de log de telefone
+TB_LOG_OPERACAO,DBLOG,PGMREL01,WRITE,Auditoria,Registro de auditoria de todas as operacoes,"CD_OPERACAO,NR_CPF,DT_OPERACAO,CD_PROGRAMA,DS_DETALHE",,50000000,INSERT de log de relatorio
+TB_LOG_OPERACAO,DBLOG,PGMDEP01,WRITE,Auditoria,Registro de auditoria de todas as operacoes,"CD_OPERACAO,NR_CPF,DT_OPERACAO,CD_PROGRAMA,DS_DETALHE",,50000000,INSERT de log de dependente
+TB_LOG_OPERACAO,DBLOG,PGMBAT01,WRITE,Auditoria,Registro de auditoria de todas as operacoes,"CD_OPERACAO,NR_CPF,DT_OPERACAO,CD_PROGRAMA,DS_DETALHE",,50000000,INSERT de log do orquestrador
+TB_CEP,DBAUX,PGMEND01,READ,Auxiliar,Tabela de CEPs validos atualizada pelos Correios,"NR_CEP,NM_CIDADE,CD_UF,NM_LOGRADOURO",NR_CEP,1200000,SELECT para validacao de CEP
+TB_DDD,DBAUX,PGMTEL01,READ,Auxiliar,Tabela de DDDs validos com localidade,"NR_DDD,NM_LOCALIDADE,CD_UF",NR_DDD,100,SELECT para validacao de DDD

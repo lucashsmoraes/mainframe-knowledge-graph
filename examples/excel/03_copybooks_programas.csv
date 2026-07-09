@@ -1,0 +1,54 @@
+Copybook,Programa,Descricao Copybook,Dominio,Tipo Dados
+CPYCLI01,PGMCLI01,Area de comunicacao de dados do cliente,Cadastro Cliente,Dados Cliente
+CPYCLI01,PGMCLI02,Area de comunicacao de dados do cliente,Cadastro Cliente,Dados Cliente
+CPYCLI01,PGMCLI03,Area de comunicacao de dados do cliente,Cadastro Cliente,Dados Cliente
+CPYCLI01,PGMCLI04,Area de comunicacao de dados do cliente,Cadastro Cliente,Dados Cliente
+CPYCLI01,PGMCLI05,Area de comunicacao de dados do cliente,Cadastro Cliente,Dados Cliente
+CPYCLI01,PGMCLI06,Area de comunicacao de dados do cliente,Cadastro Cliente,Dados Cliente
+CPYCLI01,PGMEND01,Area de comunicacao de dados do cliente,Cadastro Cliente,Dados Cliente
+CPYCLI01,PGMTEL01,Area de comunicacao de dados do cliente,Cadastro Cliente,Dados Cliente
+CPYCLI01,PGMREL01,Area de comunicacao de dados do cliente,Cadastro Cliente,Dados Cliente
+CPYCLI01,PGMDEP01,Area de comunicacao de dados do cliente,Cadastro Cliente,Dados Cliente
+CPYCLI01,PGMCAD01,Area de comunicacao de dados do cliente,Cadastro Cliente,Dados Cliente
+CPYCLI01,PGMCAD02,Area de comunicacao de dados do cliente,Cadastro Cliente,Dados Cliente
+CPYCLI01,PGMBAT01,Area de comunicacao de dados do cliente,Cadastro Cliente,Dados Cliente
+CPYERRO,PGMCLI01,Codigos e mensagens de erro padrao,Infraestrutura,Tratamento Erros
+CPYERRO,PGMCLI02,Codigos e mensagens de erro padrao,Infraestrutura,Tratamento Erros
+CPYERRO,PGMCLI03,Codigos e mensagens de erro padrao,Infraestrutura,Tratamento Erros
+CPYERRO,PGMCLI04,Codigos e mensagens de erro padrao,Infraestrutura,Tratamento Erros
+CPYERRO,PGMCLI05,Codigos e mensagens de erro padrao,Infraestrutura,Tratamento Erros
+CPYERRO,PGMCLI06,Codigos e mensagens de erro padrao,Infraestrutura,Tratamento Erros
+CPYERRO,PGMEND01,Codigos e mensagens de erro padrao,Infraestrutura,Tratamento Erros
+CPYERRO,PGMTEL01,Codigos e mensagens de erro padrao,Infraestrutura,Tratamento Erros
+CPYERRO,PGMREL01,Codigos e mensagens de erro padrao,Infraestrutura,Tratamento Erros
+CPYERRO,PGMDEP01,Codigos e mensagens de erro padrao,Infraestrutura,Tratamento Erros
+CPYERRO,PGMCAD01,Codigos e mensagens de erro padrao,Infraestrutura,Tratamento Erros
+CPYERRO,PGMCAD02,Codigos e mensagens de erro padrao,Infraestrutura,Tratamento Erros
+CPYERRO,PGMBAT01,Codigos e mensagens de erro padrao,Infraestrutura,Tratamento Erros
+CPYERRO,PGMVAL01,Codigos e mensagens de erro padrao,Infraestrutura,Tratamento Erros
+CPYLOG01,PGMCLI01,Area de comunicacao do log de operacoes,Auditoria,Log Operacional
+CPYLOG01,PGMCLI02,Area de comunicacao do log de operacoes,Auditoria,Log Operacional
+CPYLOG01,PGMCLI03,Area de comunicacao do log de operacoes,Auditoria,Log Operacional
+CPYLOG01,PGMCLI04,Area de comunicacao do log de operacoes,Auditoria,Log Operacional
+CPYLOG01,PGMCLI05,Area de comunicacao do log de operacoes,Auditoria,Log Operacional
+CPYLOG01,PGMCLI06,Area de comunicacao do log de operacoes,Auditoria,Log Operacional
+CPYLOG01,PGMEND01,Area de comunicacao do log de operacoes,Auditoria,Log Operacional
+CPYLOG01,PGMTEL01,Area de comunicacao do log de operacoes,Auditoria,Log Operacional
+CPYLOG01,PGMREL01,Area de comunicacao do log de operacoes,Auditoria,Log Operacional
+CPYLOG01,PGMDEP01,Area de comunicacao do log de operacoes,Auditoria,Log Operacional
+CPYLOG01,PGMBAT01,Area de comunicacao do log de operacoes,Auditoria,Log Operacional
+CPYVAL01,PGMCLI02,Area de comunicacao da validacao de CPF/CNPJ,Validacao,Validacao Documento
+CPYVAL01,PGMCLI03,Area de comunicacao da validacao de CPF/CNPJ,Validacao,Validacao Documento
+CPYVAL01,PGMCLI06,Area de comunicacao da validacao de CPF/CNPJ,Validacao,Validacao Documento
+CPYVAL01,PGMVAL01,Area de comunicacao da validacao de CPF/CNPJ,Validacao,Validacao Documento
+CPYVAL01,PGMDEP01,Area de comunicacao da validacao de CPF/CNPJ,Validacao,Validacao Documento
+CPYEND01,PGMEND01,Area de comunicacao de dados de endereco,Cadastro Endereco,Dados Endereco
+CPYEND01,PGMCLI06,Area de comunicacao de dados de endereco,Cadastro Endereco,Dados Endereco
+CPYEND01,PGMREL01,Area de comunicacao de dados de endereco,Cadastro Endereco,Dados Endereco
+CPYTEL01,PGMTEL01,Area de comunicacao de dados de telefone,Cadastro Telefone,Dados Telefone
+CPYTEL01,PGMCLI06,Area de comunicacao de dados de telefone,Cadastro Telefone,Dados Telefone
+CPYTEL01,PGMREL01,Area de comunicacao de dados de telefone,Cadastro Telefone,Dados Telefone
+CPYDEP01,PGMDEP01,Area de comunicacao de dados de dependente,Cadastro Dependente,Dados Dependente
+CPYCAD01,PGMCAD01,Mapa CICS da tela de cadastro principal,Interface CICS,Mapa Tela
+CPYCAD02,PGMCAD02,Mapa CICS da tela de manutencao complementar,Interface CICS,Mapa Tela
+CPYBAT01,PGMBAT01,Parametros e controles do orquestrador batch,Batch,Parametros Batch
